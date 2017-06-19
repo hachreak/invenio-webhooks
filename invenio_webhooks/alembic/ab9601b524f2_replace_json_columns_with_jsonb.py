@@ -69,8 +69,8 @@ def upgrade():
                     nullable=True, existing_nullable=True,
                     type_=_json_column(), postgresql_using='response::jsonb',
                     existing_type=existing_json_column(),
-                    existing_server_default=lambda: {'status': 202,
-                                                     'message': 'Accepted.'})
+                    existing_server_default={'status': 202,
+                                             'message': 'Accepted.'})
     op.alter_column(table_name='webhooks_events',
                     column_name='response_headers',
                     nullable=True, existing_nullable=True,
@@ -100,8 +100,8 @@ def downgrade():
                     type_=existing_json_column(),
                     existing_type=_json_column(),
                     postgresql_using='response::json',
-                    existing_server_default=lambda: {'status': 202,
-                                                     'message': 'Accepted.'})
+                    existing_server_default={'status': 202,
+                                             'message': 'Accepted.'})
     op.alter_column(table_name='webhooks_events',
                     column_name='response_headers',
                     nullable=True, existing_nullable=True,
