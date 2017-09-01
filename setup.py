@@ -52,13 +52,13 @@ extras_require = {
         'Sphinx>=1.5.2',
     ],
     'mysql': [
-        'invenio-db[mysql]>=1.0.0b3',
+        'invenio-db[mysql]>=1.0.0b8',
     ],
     'postgresql': [
-        'invenio-db[postgresql]>=1.0.0b3',
+        'invenio-db[postgresql]>=1.0.0b8',
     ],
     'sqlite': [
-        'invenio-db>=1.0.0b3',
+        'invenio-db>=1.0.0b8',
     ],
     'tests': tests_require,
 }
@@ -80,8 +80,8 @@ install_requires = [
     'SQLAlchemy>=1.1.5',
     'SQLAlchemy-Utils>=0.32.9',
     'cryptography>=1.3.1',
-    'invenio-accounts>=1.0.0b1',
-    'invenio-oauth2server>=1.0.0a13',
+    'invenio-accounts>=1.0.0b9',
+    'invenio-oauth2server>=1.0.0b1',
 ]
 
 packages = find_packages()
